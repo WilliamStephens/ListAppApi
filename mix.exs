@@ -10,7 +10,10 @@ defmodule ListApp.MixProject do
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      # Ex Doc
+      name: "List App",
+      source_url: "https://github.com/WilliamStephens/ListAppApi"
     ]
   end
 
@@ -40,7 +43,8 @@ defmodule ListApp.MixProject do
       {:postgrex, ">= 0.0.0"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:ex_doc, "~> 0.19", only: :dev, runtime: false}
     ]
   end
 
