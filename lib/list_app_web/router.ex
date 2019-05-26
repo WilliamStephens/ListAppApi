@@ -7,5 +7,8 @@ defmodule ListAppWeb.Router do
 
   scope "/api", ListAppWeb do
     pipe_through :api
+
+    resources "/users", UserController, except: [:new, :edit]
   end
+
 end
